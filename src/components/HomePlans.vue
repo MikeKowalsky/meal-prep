@@ -82,7 +82,42 @@
 
 <script>
 export default {
-  name: "HomePlans"
+  name: "HomePlans",
+  methods: {
+    showRecipes(plan) {
+      this.$store.dispatch("getRecipes", plan);
+    }
+  }
+  // data() {
+  //   return {
+  //     recipes: []
+  //   };
+  // },
+  // methods: {
+  // showRecipes(plan) {
+  //   // vegan link https://api.myjson.com/bins/1f5o9s
+  //   // keto link https://api.myjson.com/bins/nrqg0
+  //   // paleo link https://api.myjson.com/bins/bxf80
+  //   axios
+  //     .get("https://api.edamam.com/search", {
+  //       params: {
+  //         q: plan,
+  //         app_id: "8fc6f9af",
+  //         app_key: "b2b6986fa2ad190eddd3b3cd17693b8f",
+  //         from: 0,
+  //         to: 9
+  //       }
+  //     })
+  //     .then(response => {
+  //       console.log(response);
+  //       response = response.data;
+  //       console.log(response);
+  //       this.recipes = response.hits;
+  //       console.log(this.recipes);
+  //     })
+  //     .catch(err => console.log(err));
+  // }
+  // }
 };
 </script>
 
