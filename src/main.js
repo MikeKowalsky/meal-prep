@@ -7,6 +7,8 @@ import store from "./store";
 
 import Vuetify from "vuetify";
 
+import "@/firebase/";
+
 Vue.use(Vuetify);
 
 Vue.config.productionTip = false;
